@@ -13,13 +13,16 @@
 
 // Ćwicznie 2.1
 
-// const cw2_1 = (y) => {
+// const cw2_1 = () => {
+//     let y = window.prompt('Podaj liczbę lat:');
+//     y = Number(y);
+
 //     const yToDays = y*365;
 
 //     return `Years: ${y}; Days: ${yToDays}`;
 // }
 
-// console.log(cw2_1(20));
+// cw2_1();
 
 
 
@@ -30,7 +33,7 @@
 
 
 
-// Ćwiczenie 2.2
+// Ćwiczenie 2.2 - NIE DZIAŁA
 
 // const cw2_2 = () => {
 //     return 1.18 * 10^-38 * 1.18 * 10^-38;
@@ -89,7 +92,7 @@
 //     return `Fahrenheit: ${fahrenheit}; Celsjusz: ${celsius}; Kelwin: ${kelwin}`;
 // }
 
-// console.log(cw2_4());
+// cw2_4();
 
 
 
@@ -267,8 +270,7 @@
 //     return `
 //         Brutto: ${brutto} PLN;
 //         Netto: ${netto} PLN;
-//         Gross: ${gross} PLN;
-//     `;
+//         Gross: ${gross} PLN;`;
 // }
 
 // cw2_9();
@@ -372,14 +374,14 @@
 //     let numOfAtt = 1;
 
 //     while (gameStatus) {
-//         let nMin = Math.floor(Math.random() * (max - (min + 1))) + (min + 1);
-//         let nMax = Math.floor(Math.random() * ((max - 1) - min)) + min;
+//         let nMin = Math.floor(Math.random() * (max - min) + min);
+//         let nMax = Math.floor(Math.random() * (max - min)) + min;
 
 //         let pcTry = Math.floor(Math.random() * (max - min)) + min;
 
 //         if (window.confirm(`Czy twoja liczba jest większa od ${nMin}?`)) {
 //             min = nMin;
-//             nMax = Math.floor(Math.random() * ((max - 1) - min)) + min;
+//             nMax = Math.floor(Math.random() * (max - min)) + min;
 //             pcTry = Math.floor(Math.random() * (max - min)) + min;
 //         }
 
@@ -414,7 +416,7 @@
 //     let isPogramWorking = true;
 
 //     while (isPogramWorking) {
-//         const ans = window.prompt('1) dodaj 2) odejmij 3) pomnóż 4) podziel')
+//         const ans = window.prompt(` 1) dodaj\n 2) odejmij\n 3) pomnóż\n 4) podziel `)
 
 //         let num1 = window.prompt('Podaj pierwszą liczbę:');
 //         num1 = Number(num1);
@@ -424,16 +426,16 @@
 //         if (num1 != '' && num2 != '') {
 //             switch (ans) {
 //                 case '1':
-//                     return num1 + num2;
+//                     return window.alert(num1 + num2);
                     
 //                 case '2':
-//                     return num1 - num2;
+//                     return window.alert(num1 - num2);
                     
 //                 case '3':
-//                     return num1 * num2;
+//                     return window.alert(num1 * num2);
                     
 //                 case '4':
-//                     return num1 / num2;
+//                     return window.alert(num1 / num2);
 //             }
 
 //             isPogramWorking = false;
@@ -441,4 +443,4 @@
 //     }
 // }
 
-// console.log(cw2_12());
+// cw2_12();

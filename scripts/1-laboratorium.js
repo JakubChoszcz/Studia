@@ -44,7 +44,7 @@
 
 //     const aritAver = (a + b + c) / 3;
 
-//     return `Arithmetic average = ${aritAver}`;
+//     return window.alert(`Arithmetic average = ${aritAver}`);
 // }
 
 // cw1_2();
@@ -63,7 +63,7 @@
 // const cw1_3 = () => {
 //     let a = window.prompt('Enter 1. integer number: ');
 //     a = parseInt(a);
-//     let b = window.prompt('Enter 1. integer number: ');
+//     let b = window.prompt('Enter 2. integer number: ');
 //     b = parseInt(b);
     
 
@@ -73,7 +73,7 @@
 //     const exponentiation = a**b;
 //     const squareRoot = Math.sqrt(a);
 
-//     return `Addition = ${addition}; Multiplication = ${multiplication}; Division = ${division}; Exponentiation = ${exponentiation}; Square Root = ${squareRoot}`;
+//     return window.alert(` Addition = ${addition};\n Multiplication = ${multiplication};\n Division = ${division};\n Exponentiation = ${exponentiation};\n Square Root = ${squareRoot}; `);
 // }
 
 // cw1_3();
@@ -110,7 +110,7 @@
 
 
 
-// Ćwiczenie 1.5
+// Ćwiczenie 1.5 - NIE DZIAŁA
 
 // const cw1_5 = (x, y, z) => {
 //     const p = Math.sqrt(x**2 + y**2 + z**2);
