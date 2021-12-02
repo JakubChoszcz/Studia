@@ -1,109 +1,11 @@
 // ================================================
-// ================ Laboratorium 1 ================ 
-// ================================================
-
-
-
-
-
-// Ćwiczenie 1.1
-
-// const cw1_1 = () => {
-//     const a = window.prompt('Enter an integer number: ');
-//     const b = window.prompt('Enter a real number: ');
-//     const c = window.prompt('Enter a character: ');
-    
-//     return `${a}, ${b}, ${c}`;
-// }
-
-// cw1_1();
-
-
-
-
-
-// Ćwiczenie 1.2
-
-// const cw1_2 = () => {
-//     let a = window.prompt('Enter 1. integer number: ');
-//     a = parseInt(a);
-//     let b = window.prompt('Enter 2. integer number: ');
-//     b = parseInt(b);
-//     let c = window.prompt('Enter 3. integer number: ');
-//     c = parseInt(c);
-
-//     const aritAver = (a + b + c) / 3;
-
-//     return `Arithmetic average = ${aritAver}`;
-// }
-
-// cw1_2();
-
-
-
-
-
-// Ćwiczenie 1.3
-
-// const cw1_3 = () => {
-//     let a = window.prompt('Enter 1. integer number: ');
-//     a = parseInt(a);
-//     let b = window.prompt('Enter 1. integer number: ');
-//     b = parseInt(b);
-    
-
-//     const addition = a + b;
-//     const multiplication = a * b;
-//     const division = a / b;
-//     const exponentiation = a**b;
-//     const squareRoot = Math.sqrt(a);
-
-//     return `Addition = ${addition}; Multiplication = ${multiplication}; Division = ${division}; Exponentiation = ${exponentiation}; Square Root = ${squareRoot}`;
-// }
-
-// cw1_3();
-
-
-
-
-
-// Ćwiczenie 1.4
-
-// const cw1_4 = () => {
-//     let a = window.prompt('Podaj swoje imię: ');
-//     let b = window.prompt('Podaj rok urodzenia: ');
-
-//     let year = new Date().getFullYear();
-//     const age = year - b;
-
-//     return `${a}, masz ${age} lat.`;
-// }
-
-// cw1_4();
-
-
-
-
-
-// Ćwiczenie 1.5
-
-// const cw1_5 = (x, y, z) => {
-//     const p = Math.sqrt(x**2 + y**2 + z**2);
-//     const tan = y/x;
-
-
-//     console.log(`${p}, ${tan}`);
-// }
-
-// cw1_5(-2, -1, 5);
-
-
-
-
-
-// ================================================
 // ================ Laboratorium 2 ================ 
 // ================================================
+
+
+
+
+
 
 
 
@@ -123,6 +25,11 @@
 
 
 
+
+
+
+
+
 // Ćwiczenie 2.2
 
 // const cw2_2 = () => {
@@ -130,6 +37,11 @@
 // }
 
 // cw2_2();
+
+
+
+
+
 
 
 
@@ -162,6 +74,11 @@
 
 
 
+
+
+
+
+
 // Ćwiczenie 2.4 
 
 // const cw2_4 = () => {
@@ -173,6 +90,11 @@
 // }
 
 // console.log(cw2_4());
+
+
+
+
+
 
 
 
@@ -201,6 +123,11 @@
 
 
 
+
+
+
+
+
 // Ćwiczenie 2.6
 
 // const cw2_6 = () => {
@@ -219,6 +146,11 @@
 // }
 
 // cw2_6();
+
+
+
+
+
 
 
 
@@ -246,6 +178,11 @@
 // }
 
 // cw2_7();
+
+
+
+
+
 
 
 
@@ -280,6 +217,11 @@
 // }
 
 // cw2_8();
+
+
+
+
+
 
 
 
@@ -335,12 +277,15 @@
 
 
 
+
+
+
+
+
 // Ćwiczenie 2.10
 
 // const cw2_10 = () => {
-//     console.log('1) 30 PLN/h 2) 40 PLN/h 3) 50 PLN/h 4) 60 PLN/h 5) wyjdź');
-
-//     let ans = window.prompt('Wprowadź liczbę odpowiadającą żądanej stawce wynagrodzenia: ')
+//     let ans = window.prompt('1) 30 PLN/h 2) 40 PLN/h 3) 50 PLN/h 4) 60 PLN/h 5) wyjdź');
     
 //     let salary = '';
 
@@ -409,12 +354,55 @@
 
 
 
+
+
+
+
+
 // Ćwiczenie 2.11
 
 // const cw2_11 = () => {
+//     window.confirm('Pomyśl o liczbie od 1 do 100, a ja spróbuję ją odgadnąć!');
+
+//     let gameStatus = true;
+
+//     let min = 0;
+//     let max = 100;
+
+//     let numOfAtt = 1;
+
+//     while (gameStatus) {
+//         let nMin = Math.floor(Math.random() * (max - (min + 1))) + (min + 1);
+//         let nMax = Math.floor(Math.random() * ((max - 1) - min)) + min;
+
+//         let pcTry = Math.floor(Math.random() * (max - min)) + min;
+
+//         if (window.confirm(`Czy twoja liczba jest większa od ${nMin}?`)) {
+//             min = nMin;
+//             nMax = Math.floor(Math.random() * ((max - 1) - min)) + min;
+//             pcTry = Math.floor(Math.random() * (max - min)) + min;
+//         }
+
+//         if (window.confirm(`Czy twoja liczba jest mniejsza od ${nMax}?`)) {
+//             max = nMax;
+//             pcTry = Math.floor(Math.random() * (max - min)) + min;
+//         }
+
+
+//         if (window.confirm(`Czy twoją liczbą jest ${pcTry}?`)) {
+//             return window.alert(`Zgadłem twoją liczbę za ${numOfAtt} razem!`);
+//         }
+
+//         numOfAtt++;
+//     }
 // }
 
-// cw2_12();
+// cw2_11();
+
+
+
+
+
 
 
 
@@ -423,6 +411,34 @@
 // Ćwiczenie 2.12
 
 // const cw2_12 = () => {
+//     let isPogramWorking = true;
+
+//     while (isPogramWorking) {
+//         const ans = window.prompt('1) dodaj 2) odejmij 3) pomnóż 4) podziel')
+
+//         let num1 = window.prompt('Podaj pierwszą liczbę:');
+//         num1 = Number(num1);
+//         let num2 = window.prompt('Podaj drugą liczbę:');
+//         num2 = Number(num2);
+
+//         if (num1 != '' && num2 != '') {
+//             switch (ans) {
+//                 case '1':
+//                     return num1 + num2;
+                    
+//                 case '2':
+//                     return num1 - num2;
+                    
+//                 case '3':
+//                     return num1 * num2;
+                    
+//                 case '4':
+//                     return num1 / num2;
+//             }
+
+//             isPogramWorking = false;
+//         }
+//     }
 // }
 
-// cw2_12();
+// console.log(cw2_12());
