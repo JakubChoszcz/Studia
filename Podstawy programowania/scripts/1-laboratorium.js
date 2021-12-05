@@ -117,7 +117,7 @@
 //     const tan = y/x;
 
 
-//     console.log(`${p}, ${tan}`);
+//     return `${p}, ${tan}`;
 // }
 
 // cw1_5(-2, -1, 5);
