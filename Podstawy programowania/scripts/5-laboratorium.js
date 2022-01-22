@@ -135,17 +135,48 @@ const THIRD_ARRAY = [0, -6, 6.7, 54.7, 9];
 
 
 
+const STRUCTURE = [
+    {
+        pesel: 70050847935,
+        data: {
+            firstName: 'Michael',
+            secondName: 'Jeffrey',
+            lastName: 'Jordan'
+        }
+    },
+    {
+        pesel: 82011232995,
+        data: {
+            firstName: 'LeBron',
+            secondName: '',
+            lastName: 'James'
+        }
+    },
+    {
+        pesel: 50041727598,
+        data: {
+            firstName: 'Kobe',
+            secondName: 'Bean',
+            lastName: 'Bryant'
+        }
+    }
+]
 
 
 
 
 
-// // Ćwicznie 5.6
+// Ćwicznie 5.6
 
-// const cw5_6 = (arr) => {
-// }
+const cw5_6 = (structure) => {
+    for (const person of structure) {
+        const { pesel, data } = person;
 
-// cw5_6(PRIMARY_ARRAY);
+        console.log(`${data.firstName} ${data.secondName && `${data.secondName.slice(0, 1)}.` } ${data.lastName} ${pesel}`);
+    }
+}
+
+cw5_6(STRUCTURE);
 
 
 
@@ -161,32 +192,91 @@ const WSPOLRZEDNE = [
 
 
 
-// Ćwicznie 5.7
+// // Ćwicznie 5.7
 
-const cw5_7 = (arr) => {
-    for (const obj of arr) {
-        console.log(`Współrzędne dla ${obj['miasto']}: `);
+// const cw5_7 = (arr) => {
+//     for (const obj of arr) {
+//         console.log(`Współrzędne dla ${obj['miasto']}: `);
+//     }
+// }
+
+// cw5_7(WSPOLRZEDNE);
+
+
+
+
+
+const STUDENTS = [
+    { 
+        id: 1, 
+        firstName: 'Gertrude', 
+        lastName: 'Moreno',
+        averageGrade: 3.33,
+        pairs: { 
+            math: 4, 
+            english: 3, 
+            history: 4
+        } 
+    },
+    { 
+        id: 2, 
+        firstName: 'Mark', 
+        lastName: 'Carr', 
+        averageGrade: 3.66,
+        pairs: { 
+            math: 3, 
+            english: 5, 
+            history: 3
+        } 
+    },
+    { 
+        id: 3, 
+        firstName: 'Jeanne', 
+        lastName: 'Hall', 
+        averageGrade: 4.33,
+        pairs: { 
+            math: 5, 
+            english: 5, 
+            history: 3
+        } 
     }
-}
-
-cw5_7(WSPOLRZEDNE);
+]
 
 
 
 
 
+// // Ćwicznie 5.8
 
+// const studentFormater = (student) => {
+//     return `id : ${student.id},\nfirst name : ${student.firstName},\nlast name : ${student.lastName},\naverage grade : ${student.averageGrade}\npairs : ${JSON.stringify(student.pairs)} `
+// }
 
+// const cw5_8 = () => {
+//     const answer = window.prompt(`What do You want to do?\n(1) Find by ID\n(2) Retur all students`);
 
+//     switch (answer) {
+//         case '1' :
+//             let selectedStudent = 'There is no student with coresponding ID'
+//             const studentID = window.prompt(`Please type the ID of a student`);
+        
+//             for (const student of STUDENTS) {
+//                 if (studentID == student.id) {
+//                     selectedStudent = studentFormater(student);
+//                 }
+//             }
 
+//             return console.log(selectedStudent);
+//         case '2' :
+//             const usersList = [];
 
-// Ćwicznie 5.8
+//             for (const student of STUDENTS) {
+//                 console.log(studentFormater(student));
+//             }
+//     }
+// }
 
-const cw5_8 = () => {
-    
-}
-
-cw5_8();
+// cw5_8();
 
 
 
