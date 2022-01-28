@@ -4,11 +4,7 @@
 
 
 
-
-
 const PRIMARY_ARRAY = [5, -123, 4.5, 12, 27, -3.4, 54, -23.4, 67, -12, 0, -6, 6.7, 54.7, 9];
-
-
 
 
 
@@ -16,7 +12,7 @@ const PRIMARY_ARRAY = [5, -123, 4.5, 12, 27, -3.4, 54, -23.4, 67, -12, 0, -6, 6.
 
 // const cw5_1 = (arr) => {
 //     return arr.reduce((a, b) => a + b, 0);
-// }
+// };
 
 // cw5_1(PRIMARY_ARRAY);
 
@@ -45,7 +41,7 @@ const PRIMARY_ARRAY = [5, -123, 4.5, 12, 27, -3.4, 54, -23.4, 67, -12, 0, -6, 6.
 //             }
 //         }
 //     }
-// }
+// };
 
 // cw5_2(PRIMARY_ARRAY);
 
@@ -60,13 +56,20 @@ const PRIMARY_ARRAY = [5, -123, 4.5, 12, 27, -3.4, 54, -23.4, 67, -12, 0, -6, 6.
 
 // // Ćwicznie 5.3
 
-// const cw5_3 = (arr) => {
-//     firstArrayCopy = [...arr];
+// const cw5_3 = () => {
+//     const initialTable = [{ id: 1 }, { id: 2 }];
+//     let firstTable = [{ id: 3 }, { id: 4 }];
+//     let secondTable = [{ id: 5 }, { id: 6 }];
 
-//     console.log(firstArrayCopy);
-// }
+//     const copyTable = (sourceTable, destinyTable) => {
+//         return destinyTable = [ ...destinyTable, ...sourceTable ];
+//     }
 
-// cw5_3(PRIMARY_ARRAY);
+//     copyTable(initialTable, firstTable);
+//     copyTable(initialTable, secondTable);
+// };
+
+// cw5_3();
 
 
 
@@ -80,16 +83,20 @@ const PRIMARY_ARRAY = [5, -123, 4.5, 12, 27, -3.4, 54, -23.4, 67, -12, 0, -6, 6.
 // // Ćwicznie 5.4
 
 // const cw5_4 = (arr) => {
-//     let max = 0;
-//     let min = 0;
+//     const array = arr.sort((a, b) => b - a);
 
-//     arr.forEach((nb) => {if (nb > max) {max = nb}});
-//     arr.forEach((nb) => {if (nb < min) {min = nb}});
+//     let max = array[0];
+//     let min = array[array.length - 1];
     
 //     return max - min;
-// }
+// };
 
 // cw5_4(PRIMARY_ARRAY);
+
+
+
+
+
 
 
 
@@ -98,8 +105,6 @@ const PRIMARY_ARRAY = [5, -123, 4.5, 12, 27, -3.4, 54, -23.4, 67, -12, 0, -6, 6.
 const FIRST_ARRAY = [5, -123, 4.5, 12, 27];
 const SECOND_ARRAY = [-3.4, 54, -23.4, 67, -12];
 const THIRD_ARRAY = [0, -6, 6.7, 54.7, 9];
-
-
 
 
 
@@ -135,6 +140,11 @@ const THIRD_ARRAY = [0, -6, 6.7, 54.7, 9];
 
 
 
+
+
+
+
+
 const STRUCTURE = [
     {
         pesel: 70050847935,
@@ -160,47 +170,67 @@ const STRUCTURE = [
             lastName: 'Bryant'
         }
     }
-]
+];
+
+
+
+// // Ćwicznie 5.6
+
+// const cw5_6 = (structure) => {
+//     for (const person of structure) {
+//         const { pesel, data } = person;
+
+//         console.log(`${data.firstName} ${data.secondName && `${data.secondName.slice(0, 1)}.` } ${data.lastName} ${pesel}`);
+//     }
+// };
+
+// cw5_6(STRUCTURE);
 
 
 
 
 
-// Ćwicznie 5.6
-
-const cw5_6 = (structure) => {
-    for (const person of structure) {
-        const { pesel, data } = person;
-
-        console.log(`${data.firstName} ${data.secondName && `${data.secondName.slice(0, 1)}.` } ${data.lastName} ${pesel}`);
-    }
-}
-
-cw5_6(STRUCTURE);
 
 
 
 
 
 const WSPOLRZEDNE = [
-    {'miasto':'Warszawa', 'dlugosc':21.0117800, 'szerokosc':52.2297700},
-    {'miasto':'Wrocław', 'dlugosc':17.0333300, 'szerokosc':51.1000000},
-    {'miasto':'Kraków', 'dlugosc':19.9365800, 'szerokosc':50.0614300},
+    {miasto: 'Warszawa', dlugosc: 21.0117800, szerokosc: 52.2297700},
+    {miasto: 'Wrocław', dlugosc: 17.0333300, szerokosc: 51.1000000},
+    {miasto: 'Kraków', dlugosc: 19.9365800, szerokosc: 50.0614300}
 ];
-
-
 
 
 
 // // Ćwicznie 5.7
 
-// const cw5_7 = (arr) => {
-//     for (const obj of arr) {
-//         console.log(`Współrzędne dla ${obj['miasto']}: `);
-//     }
-// }
+// const coordinatesConverter = (coord) => {
+//     const coordText = coord.toString().split('.');
 
-// cw5_7(WSPOLRZEDNE);
+//     const deg = coordText[0];
+//     const frac = +`0.${coordText[1]}`;
+//     const min = Math.floor(frac * 60);
+//     const sec = ((frac * 60 - min) * 60).toFixed(3);
+
+//     return `${deg}°${min}'${sec}"`;
+// };
+
+
+
+// const cw5_7 = () => {
+//     for (const obj of WSPOLRZEDNE) {
+//         console.log(`Współrzędne dla ${obj['miasto']}: ${coordinatesConverter(obj['szerokosc'])} N szerokość, ${coordinatesConverter(obj['dlugosc'])} E długość`);
+//     }
+// };
+
+// cw5_7();
+
+
+
+
+
+
 
 
 
@@ -212,45 +242,33 @@ const STUDENTS = [
         firstName: 'Gertrude', 
         lastName: 'Moreno',
         averageGrade: 3.33,
-        pairs: { 
-            math: 4, 
-            english: 3, 
-            history: 4
-        } 
+        pairs: { math: 4, english: 3, history: 4 } 
     },
     { 
         id: 2, 
         firstName: 'Mark', 
         lastName: 'Carr', 
         averageGrade: 3.66,
-        pairs: { 
-            math: 3, 
-            english: 5, 
-            history: 3
-        } 
+        pairs: {  math: 3, english: 5, history: 3 } 
     },
     { 
         id: 3, 
         firstName: 'Jeanne', 
         lastName: 'Hall', 
         averageGrade: 4.33,
-        pairs: { 
-            math: 5, 
-            english: 5, 
-            history: 3
-        } 
+        pairs: { math: 5, english: 5, history: 3 } 
     }
-]
-
-
+];
 
 
 
 // // Ćwicznie 5.8
 
 // const studentFormater = (student) => {
-//     return `id : ${student.id},\nfirst name : ${student.firstName},\nlast name : ${student.lastName},\naverage grade : ${student.averageGrade}\npairs : ${JSON.stringify(student.pairs)} `
-// }
+//     return `id: ${student.id},\nfirst name: ${student.firstName},\nlast name: ${student.lastName},\naverage grade: ${student.averageGrade}\npairs: ${JSON.stringify(student.pairs)}`
+// };
+
+
 
 // const cw5_8 = () => {
 //     const answer = window.prompt(`What do You want to do?\n(1) Find by ID\n(2) Retur all students`);
@@ -274,7 +292,7 @@ const STUDENTS = [
 //                 console.log(studentFormater(student));
 //             }
 //     }
-// }
+// };
 
 // cw5_8();
 
@@ -287,10 +305,50 @@ const STUDENTS = [
 
 
 
-// Ćwicznie 5.9
+const ULGI = [
+    { 
+        'nazwa skrócona ulgi': 'noworodek',
+        'wartość': { 
+            'ulga w procentach': 100, 
+            'opis ulgi': 'ulga przysługująca osobom do 2 roku życia', 
+            'wiek': 2
+        }
+    },
+    { 
+        'nazwa skrócona ulgi': 'dziecko',
+        'wartość': { 
+            'ulga w procentach': 60, 
+            'opis ulgi': 'ulga przysługująca osobom do 12 roku życia', 
+            'wiek': 12
+        }
+    },
+    { 
+        'nazwa skrócona ulgi': 'nastolatek',
+        'wartość': { 
+            'ulga w procentach': 30, 
+            'opis ulgi': 'ulga przysługująca osobom do 18 roku życia', 
+            'wiek': 18
+        }
+    }
+];
 
-const cw5_9 = () => {
-    
-}
 
-cw5_9();
+
+// // Ćwicznie 5.9
+
+// const cw5_9 = () => {
+//     for (const ulga of ULGI) {
+//         console.log(`Skrócona nazwa ulgi: ${ulga["nazwa skrócona ulgi"]}`);
+//     }
+
+//     let userAge = window.prompt('Podaj swój wiek');
+//     userAge = +userAge;
+
+//     for (const ulga of ULGI) {
+//         if (userAge <= ulga.wartość.wiek) {
+//             return console.log(`Przysługuje Ci ulga z tytułu '${ulga["nazwa skrócona ulgi"]}', wynosząca ${ulga.wartość["ulga w procentach"]}%`);
+//         }
+//     }
+// };
+
+// cw5_9();
