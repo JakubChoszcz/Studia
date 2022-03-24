@@ -9,11 +9,14 @@ public class Main {
         double x1 = (-b + Math.sqrt(delta)) / (2 * a);
         double x2 = (-b - Math.sqrt(delta)) / (2 * a);
 
-        System.out.println("x1: " + x1);
-        System.out.println("x2: " + x2);
+        System.out.println("Ćwieczenie 1.");
+        System.out.println("x1 = " + x1);
+        System.out.println("x2 = " + x2);
 
+        System.out.println("\nĆwieczenie 2.");
         for (double i = -3; i <= 3; i = (i * 10 + 1) / 10) {
-            System.out.println("Wartość funkcji dla x równego " + i + " = " + (a * Math.pow(i, 2) + b * i + c));
+            System.out.println("Wartosc funkcji dla x = " + i + " wynosi "
+                    + ((a * Math.pow((i * 10), 2) + (b * (i * 100)) + (c * 100)) / 100));
         }
     }
 }
